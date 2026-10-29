@@ -1,0 +1,80 @@
+# SOJI — 7th Anniversary Website
+
+Website satu halaman (one-page) untuk perayaan 7 tahun **SOJI Skin Clinic & Library**.
+Dibangun dengan HTML + CSS + JavaScript murni — tanpa framework, tanpa build step.
+Cukup buka `index.html` di browser.
+
+---
+
+## Cara ganti isi website
+
+**Semua teks ada di satu file:** `assets/js/content.js`
+
+Buka file itu, cari tanda `⬅ GANTI`, lalu tulis ulang isinya. Tidak perlu menyentuh
+HTML atau CSS sama sekali. Simpan, refresh browser, selesai.
+
+### Checklist data yang masih placeholder
+
+| Bagian | Yang perlu diisi |
+|---|---|
+| `brand` | Tahun berdiri (`periode`) dan kota |
+| `prolog` | Narasi pembuka — ambil dari dokumen *Story SOJI 7th Anniversary* |
+| `timeline` | Cerita tiap tahun (Babak 1–7) + tahunnya |
+| `milestones` | **Angka masih contoh** — jumlah klien, treatment, dsb. |
+| `services` | Daftar layanan & harga/durasi yang sebenarnya |
+| `voices` | Testimoni asli klien |
+| `anniversary` | Promo perayaan yang benar-benar berjalan |
+| `contact` | Alamat, jam buka, WhatsApp, Instagram, TikTok, email |
+
+> Catatan: angka di bagian *Tujuh tahun dalam angka* sengaja diisi contoh.
+> Hapus baris `note:` di `milestones` setelah angkanya diganti dengan data asli.
+
+---
+
+## Struktur folder
+
+```
+index.html              ← kerangka halaman
+assets/
+  css/style.css         ← seluruh styling & brand token
+  js/content.js         ← ISI WEBSITE (edit di sini)
+  js/main.js            ← render + animasi
+  img/                  ← taruh foto klinik / treatment di sini
+```
+
+## Brand token (warna & font)
+
+Ada di bagian paling atas `assets/css/style.css`:
+
+```css
+--cream:  #FBF7F2;   /* latar ivory hangat   */
+--ink:    #2A211C;   /* espresso, teks utama */
+--gold:   #B98E4C;   /* aksen emas lembut    */
+--blush:  #E9D4C6;   /* rona kulit           */
+--sage:   #8D9C87;   /* hijau tenang         */
+```
+
+Font: *Cormorant Garamond* (judul) + *Plus Jakarta Sans* (teks).
+Ganti satu nilai di situ, seluruh halaman ikut berubah.
+
+Mode gelap sudah ikut: halaman menyesuaikan tema perangkat secara otomatis.
+
+## Menambahkan foto
+
+1. Taruh file di `assets/img/`.
+2. Panggil dari CSS, misalnya untuk latar hero:
+   ```css
+   .hero { background: url("../img/klinik.jpg") center/cover; }
+   ```
+
+## Publikasi
+
+**GitHub Pages** — Settings → Pages → Source: `Deploy from a branch` →
+pilih branch ini → folder `/ (root)` → Save.
+
+Alternatif tanpa konfigurasi: drag folder ini ke [netlify.com/drop](https://app.netlify.com/drop).
+
+## Dukungan browser
+
+Chrome, Safari, Firefox, dan Edge versi terbaru. Responsif dari layar HP
+sampai desktop, dan menghormati pengaturan *reduce motion*.
