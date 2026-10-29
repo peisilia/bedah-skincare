@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Promo SOJI 7th Anniversary</title>
+<meta name="description" content="Diskon 7% + Korean Facial 3 Steps gratis. Korean Facial 499K, paket Slimming 1.799K, Brightening Premium 2.999K. SOJI Skincare Tasikmalaya.">
+<meta name="theme-color" content="#FBF7F2">
+
+<!-- Preview saat link dibagikan di WhatsApp / IG.
+     ⬅ GANTI jadi URL absolut setelah domain Netlify final,
+        contoh: https://namasitu.netlify.app/assets/img/og-promo.jpg -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Promo SOJI 7th Anniversary">
+<meta property="og:description" content="Diskon 7% + Korean Facial 3 Steps gratis untuk setiap treatment di atas 500rb.">
+<meta property="og:image" content="/assets/img/og-promo.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%232A211C'/><text x='50' y='70' font-size='58' font-family='Georgia,serif' fill='%23B98E4C' text-anchor='middle'>7</text></svg>">
+
+<style>
+/* Halaman promo — satu kolom ala story, pakai brand token situs utama
+   (ivory · espresso · gold) + aksen Canva anniversary (mocha · teal · koral). */
+:root{
+  --cream:#FBF7F2; --cream-2:#F4ECE3; --card:#FFFFFF;
+  --ink:#2A211C; --ink-soft:#6E5C51;
+  --gold:#B98E4C; --mocha:#A06A45; --mocha-deep:#8A5634;
+  --teal:#1F5467; --coral:#D9544A; --blush:#E9D4C6;
+  --line:rgba(42,33,28,.14); --chip:#F4ECE3;
+  --shadow:0 1px 2px rgba(42,33,28,.04), 0 12px 32px -18px rgba(42,33,28,.28);
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --sans:"Plus Jakarta Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --cream:#15110F; --cream-2:#1C1714; --card:#1E1815;
+  --ink:#F3EAE1; --ink-soft:#B3A196;
+  --gold:#D7AC65; --mocha:#D59A6B; --mocha-deep:#E6B187;
+  --teal:#7FBED1; --coral:#FF8073; --blush:#3A2C25;
+  --line:rgba(243,234,225,.14); --chip:#241D19;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 14px 36px -20px rgba(0,0,0,.8);
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --cream:#15110F; --cream-2:#1C1714; --card:#1E1815;
+  --ink:#F3EAE1; --ink-soft:#B3A196;
+  --gold:#D7AC65; --mocha:#D59A6B; --mocha-deep:#E6B187;
+  --teal:#7FBED1; --coral:#FF8073; --blush:#3A2C25;
+  --line:rgba(243,234,225,.14); --chip:#241D19;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 14px 36px -20px rgba(0,0,0,.8);
+  color-scheme:dark;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);
+     font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+     padding-top:env(safe-area-inset-top,0px);
+     padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,h4{margin:0;text-wrap:balance}
+p{margin:0}
+
+.wrap{max-width:620px;margin:0 auto;
+      padding-left:max(18px,env(safe-area-inset-left,0px));
+      padding-right:max(18px,env(safe-area-inset-right,0px))}
+section{padding-block:34px}
+
+.hero{padding-block:30px 10px;text-align:center}
+.mark{display:inline-block;background:#F6F1E9;border-radius:14px;padding:10px 16px 8px;border:1px solid var(--line)}
+.mark img{width:154px;height:auto}
+.eyebrow{font-size:.68rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--mocha)}
+.hero .eyebrow{margin-top:24px}
+.seven{font-weight:800;font-size:clamp(4.4rem,23vw,7rem);line-height:.84;
+       letter-spacing:-.045em;color:var(--mocha-deep);margin-top:6px}
+.seven sup{font-size:.26em;font-weight:600;vertical-align:super;letter-spacing:0}
+.anniv{font-family:var(--serif);font-size:clamp(1.6rem,7vw,2.3rem);font-style:italic;
+       font-weight:400;margin-top:2px}
+.hero-note{font-size:.95rem;color:var(--ink-soft);margin-top:14px;max-width:34ch;margin-inline:auto}
+.period{display:inline-flex;flex-wrap:wrap;justify-content:center;align-items:center;
+        gap:6px 10px;margin-top:16px;background:var(--chip);border:1px solid var(--line);
+        border-radius:16px;padding:9px 16px;font-size:.84rem;font-weight:600;line-height:1.4}
+.period .dot{width:4px;height:4px;border-radius:99px;background:var(--mocha);flex:none}
+.period .left{color:var(--coral);font-variant-numeric:tabular-nums}
+.period .left.ended{color:var(--ink-soft)}
+.confetti{display:flex;justify-content:center;gap:7px;margin-top:20px}
+.confetti i{width:30px;height:5px;border-radius:99px;display:block}
+
+.band{background:var(--teal);border-radius:20px;padding:26px 22px;color:#FFF8EE;
+      margin-top:26px;box-shadow:var(--shadow)}
+.band .eyebrow{color:#F0C87E}
+.band h2{font-weight:800;font-size:clamp(1.45rem,6.4vw,1.95rem);line-height:1.1;
+         margin-top:8px;letter-spacing:-.015em}
+.band p{color:#E6DBCC;font-size:.93rem;margin-top:10px}
+.band .rule{height:1px;background:rgba(255,248,238,.22);margin-block:16px}
+.band ul{margin:0;padding-left:1.05rem;color:#F1E7D9;font-size:.92rem;display:grid;gap:5px}
+
+.deck{display:grid;gap:18px;margin-top:20px}
+.promo{background:var(--card);border:1px solid var(--line);border-radius:18px;
+       overflow:hidden;box-shadow:var(--shadow)}
+.promo-top{padding:20px 20px 0;display:flex;gap:10px;align-items:flex-start;
+           justify-content:space-between;flex-wrap:wrap}
+.tag{font-size:.63rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+     padding:5px 10px;border-radius:99px;white-space:nowrap}
+.tag-hero{background:var(--coral);color:#fff}
+.tag-bundle{background:var(--gold);color:#2A211C}
+.tag-prem{background:var(--teal);color:#FFF8EE}
+.promo h3{font-weight:800;font-size:1.26rem;line-height:1.18;flex:1 1 11rem;
+          min-width:0;letter-spacing:-.015em}
+.promo h3 small{display:block;font-weight:700;font-size:.72rem;letter-spacing:.14em;
+                text-transform:uppercase;color:var(--mocha);margin-bottom:5px}
+.promo-body{padding:14px 20px 20px;display:grid;gap:14px}
+.lead{font-size:.93rem;color:var(--ink-soft)}
+
+.lines{display:grid;gap:9px;margin:0;padding:0;list-style:none}
+.lines li{display:flex;gap:9px;align-items:baseline;font-size:.9rem}
+.lines li::before{content:"";width:6px;height:6px;border-radius:99px;flex:none;
+                  background:var(--mocha);transform:translateY(-2px)}
+.lines b{font-weight:600}
+.lines span{color:var(--ink-soft)}
+
+.free{background:var(--chip);border-radius:13px;padding:13px 15px;display:grid;gap:7px}
+.free .eyebrow{font-size:.62rem}
+.free ul{margin:0;padding:0;list-style:none;display:grid;gap:5px;font-size:.88rem}
+.free li{display:flex;gap:8px}
+.free li::before{content:"\2726";color:var(--gold);flex:none}
+
+.price{display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap;
+       border-top:1px dashed var(--line);padding-top:15px}
+.price-now{font-weight:800;font-size:2.1rem;line-height:1;color:var(--mocha-deep);
+           font-variant-numeric:tabular-nums;letter-spacing:-.03em}
+.price-now sup{font-size:.4em;font-weight:600;vertical-align:top;margin-right:2px}
+.price-now em{font-style:normal;font-size:.45em}
+.price-was{font-size:.86rem;color:var(--ink-soft);line-height:1.35}
+.price-was s{opacity:.75}
+.save{margin-left:auto;font-size:.7rem;font-weight:700;letter-spacing:.1em;
+      text-transform:uppercase;color:var(--coral);white-space:nowrap}
+
+.btn{display:block;text-align:center;text-decoration:none;border-radius:12px;
+     font-weight:700;font-size:.92rem;padding:13px 18px;transition:transform .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn:focus-visible{outline:2px solid var(--mocha);outline-offset:3px}
+.btn-main{background:var(--mocha-deep);color:#FFF8EE}
+.btn-ghost{background:transparent;color:var(--mocha-deep);border:1.5px solid var(--mocha)}
+
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:18px}
+.cell{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px;
+      display:grid;gap:6px;align-content:start}
+.cell h4{font-weight:700;font-size:.95rem;line-height:1.25}
+.cell p{font-size:.81rem;color:var(--ink-soft)}
+@media (max-width:430px){.grid{grid-template-columns:1fr}}
+
+.info{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;
+      display:grid;gap:16px;margin-top:18px}
+.hours{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.hours strong{font-weight:800;font-size:1.45rem;font-variant-numeric:tabular-nums;color:var(--teal)}
+.contact{display:grid;gap:10px;font-size:.9rem}
+.row{display:flex;gap:10px;align-items:center;justify-content:space-between;
+     border-top:1px solid var(--line);padding-top:10px}
+.row:first-child{border-top:0;padding-top:0}
+.row span.k{color:var(--ink-soft);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;
+            font-weight:700;flex:none}
+.row b{font-weight:600;text-align:right;min-width:0;overflow-wrap:anywhere}
+.addr{font-size:.9rem;color:var(--ink-soft);border-top:1px solid var(--line);padding-top:14px}
+.copy{appearance:none;border:1px solid var(--line);background:var(--chip);color:var(--ink);
+      font:inherit;font-size:.76rem;font-weight:600;border-radius:9px;padding:5px 10px;cursor:pointer}
+.copy:hover{border-color:var(--mocha)}
+
+.closing{text-align:center;padding-block:30px 10px}
+.closing .sig{font-family:var(--serif);font-style:italic;font-size:1.45rem;color:var(--mocha-deep)}
+.closing p{font-size:.84rem;color:var(--ink-soft);margin-top:6px}
+.terms{font-size:.78rem;color:var(--ink-soft);text-align:center;padding-block:18px 26px;
+       max-width:40ch;margin-inline:auto}
+.backlink{display:block;text-align:center;font-size:.82rem;color:var(--ink-soft);
+          padding-bottom:10px;text-decoration:none}
+.backlink:hover{color:var(--mocha-deep)}
+
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--cream);
+        border-top:1px solid var(--line);
+        padding-top:12px;padding-bottom:calc(12px + env(safe-area-inset-bottom,0px));
+        padding-left:max(18px,env(safe-area-inset-left,0px));
+        padding-right:max(18px,env(safe-area-inset-right,0px))}
+.sticky .inner{max-width:620px;margin:0 auto}
+.sticky .btn{background:#128C4B;color:#fff;display:flex;align-items:center;justify-content:center;gap:9px}
+.sticky svg{width:18px;height:18px;flex:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="hero">
+    <div class="mark"><img src="/assets/img/soji-logo.png" alt="SOJI Skincare" width="600" height="260"></div>
+    <p class="eyebrow">Tasikmalaya &middot; Korean Aesthetic Clinic</p>
+    <div class="seven">7<sup>th</sup></div>
+    <div class="anniv">Anniversary</div>
+    <p class="hero-note">Tujuh tahun merawat kulit orang Tasik. Kami rayakan dengan harga yang jarang kami buka.</p>
+    <p class="period">
+      <span class="dates">25 Okt &ndash; 5 Des 2026</span>
+      <span class="dot" aria-hidden="true"></span>
+      <span class="left" id="sisa">periode perayaan</span>
+    </p>
+    <div class="confetti" aria-hidden="true">
+      <i style="background:var(--coral)"></i><i style="background:var(--gold)"></i>
+      <i style="background:var(--teal)"></i><i style="background:var(--blush)"></i>
+    </div>
+
+    <div class="band">
+      <p class="eyebrow">Berlaku untuk semua treatment</p>
+      <h2>Diskon 7% + Korean Facial 3 Steps gratis</h2>
+      <p>Setiap pembelian treatment di atas Rp500.000 otomatis dapat potongan 7% dan satu sesi Korean Facial 3 Steps, tanpa biaya.</p>
+      <div class="rule"></div>
+      <ul>
+        <li>Konsultasi kulit gratis sebelum treatment</li>
+        <li>Dibuatkan plan treatment sesuai kondisi kulitmu</li>
+        <li>Ditangani therapist SOJI yang sudah tersertifikasi</li>
+      </ul>
+    </div>
+  </header>
+
+  <section aria-label="Paket anniversary">
+    <p class="eyebrow">Paket Anniversary</p>
+    <div class="deck">
+
+      <article class="promo">
+        <div class="promo-top">
+          <h3><small>Paling dicari</small>SOJI 7 Steps Korean Facial</h3>
+          <span class="tag tag-hero">Hemat 250K</span>
+        </div>
+        <div class="promo-body">
+          <p class="lead">Pilih fokusnya: <b>Brightening</b> dengan serum vitamin C untuk kulit kusam, atau <b>Acne Fight</b> untuk menghempas jerawat dan komedo sampai ke akar.</p>
+          <ul class="lines">
+            <li><b>Menyamarkan mata panda</b></li>
+            <li><b>Mencerahkan kulit yang kusam</b></li>
+            <li><b>Kulit jadi lebih lembap</b></li>
+            <li><b>Konsultasi gratis</b> <span>+ dibuatkan plan treatment</span></li>
+          </ul>
+          <div class="price">
+            <div class="price-now"><sup>Rp</sup>499<em>K</em></div>
+            <div class="price-was">harga normal<br><s>Rp749K</s></div>
+            <div class="save">Hemat 33%</div>
+          </div>
+          <a class="btn btn-main" href="https://wa.me/6281224867799?text=Halo%20SOJI%2C%20saya%20mau%20booking%20promo%20Anniversary%3A%20SOJI%207%20Steps%20Korean%20Facial%20499K.%20Masih%20ada%20slot%3F" target="_blank" rel="noopener">Booking 7 Steps Korean Facial</a>
+        </div>
+      </article>
+
+      <article class="promo">
+        <div class="promo-top">
+          <h3><small>Buy 3 Get 8</small>Full Body Slimming Signature</h3>
+          <span class="tag tag-bundle">Hemat 1.795K</span>
+        </div>
+        <div class="promo-body">
+          <p class="lead">Tiga area dikerjakan, delapan benefit yang pulang bareng kamu.</p>
+          <ul class="lines">
+            <li><b>Slimming tangan</b> <span>&mdash; siku sampai jari, atau pangkal tangan sampai siku</span></li>
+            <li><b>Slimming paha</b> <span>&mdash; lutut sampai jari, atau pangkal paha sampai lutut</span></li>
+            <li><b>Slimming perut</b></li>
+          </ul>
+          <div class="free">
+            <p class="eyebrow">Gratis</p>
+            <ul><li>Full Body Fat Burner</li><li>Gift Body Lotion</li></ul>
+          </div>
+          <div class="price">
+            <div class="price-now"><sup>Rp</sup>1.799<em>K</em></div>
+            <div class="price-was">normal satuan Rp599K<br>6&times; sesi <s>Rp3.594K</s></div>
+            <div class="save">Worth 3.594K</div>
+          </div>
+          <a class="btn btn-main" href="https://wa.me/6281224867799?text=Halo%20SOJI%2C%20saya%20mau%20ambil%20promo%20Anniversary%3A%20Full%20Body%20Slimming%20Signature%20Buy%203%20Get%208%20%E2%80%94%201.799K." target="_blank" rel="noopener">Ambil paket Slimming</a>
+        </div>
+      </article>
+
+      <article class="promo">
+        <div class="promo-top">
+          <h3><small>Paket terlengkap</small>Full Body Brightening Premium</h3>
+          <span class="tag tag-prem">Hemat 3.343K</span>
+        </div>
+        <div class="promo-body">
+          <p class="lead">Lima area sekaligus &mdash; buat kamu yang mau cerah merata, bukan sepotong-sepotong.</p>
+          <ul class="lines">
+            <li><b>Brightening tangan</b> <span>&mdash; normal Rp1.498K</span></li>
+            <li><b>Brightening kaki</b> <span>&mdash; normal Rp1.498K</span></li>
+            <li><b>Brightening punggung</b> <span>&mdash; normal Rp749K</span></li>
+            <li><b>Brightening selangkangan</b> <span>&mdash; normal Rp999K</span></li>
+            <li><b>Brightening ketiak</b> <span>&mdash; normal Rp799K</span></li>
+          </ul>
+          <div class="free">
+            <p class="eyebrow">Gratis</p>
+            <ul>
+              <li>Fat Burner <span style="color:var(--ink-soft)">(normal Rp749K)</span></li>
+              <li>Body Lotion</li>
+            </ul>
+          </div>
+          <div class="price">
+            <div class="price-now"><sup>Rp</sup>2.999<em>K</em></div>
+            <div class="price-was">total normal<br><s>Rp6.342K</s></div>
+            <div class="save">Worth 6.342K</div>
+          </div>
+          <a class="btn btn-main" href="https://wa.me/6281224867799?text=Halo%20SOJI%2C%20saya%20mau%20ambil%20promo%20Anniversary%3A%20Full%20Body%20Brightening%20Premium%20%E2%80%94%202.999K." target="_blank" rel="noopener">Ambil paket Brightening</a>
+        </div>
+      </article>
+
+      <article class="promo">
+        <div class="promo-top">
+          <h3><small>Buy 2 Get 6</small>Brightening Tangan + Kaki</h3>
+          <span class="tag tag-bundle">Worth 4.500K</span>
+        </div>
+        <div class="promo-body">
+          <p class="lead">Versi ringkas dari paket premium. Dua area yang paling sering kelihatan.</p>
+          <ul class="lines">
+            <li><b>SOJI Brightening Tangan</b> <span>&mdash; normal Rp1.498K</span></li>
+            <li><b>SOJI Brightening Kaki</b> <span>&mdash; normal Rp1.498K</span></li>
+          </ul>
+          <div class="free">
+            <p class="eyebrow">Gratis</p>
+            <ul><li>SOJI Fat Burner + Body Lotion <span style="color:var(--ink-soft)">(normal Rp1.348K)</span></li></ul>
+          </div>
+          <div class="price">
+            <div class="price-now"><sup>Rp</sup>1.498<em>K</em></div>
+            <div class="price-was">nilai treatment<br><s>Rp4.500K</s></div>
+            <div class="save">Bayar 1 area</div>
+          </div>
+          <a class="btn btn-main" href="https://wa.me/6281224867799?text=Halo%20SOJI%2C%20saya%20mau%20ambil%20promo%20Anniversary%3A%20Brightening%20Tangan%20%2B%20Kaki%20Buy%202%20Get%206%20%E2%80%94%201.498K." target="_blank" rel="noopener">Ambil Buy 2 Get 6</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section aria-label="Treatment lain">
+    <p class="eyebrow">Diskon 7% + Korean Facial gratis juga berlaku di</p>
+    <div class="grid">
+      <div class="cell">
+        <h4>SOJI Body Brightening</h4>
+        <p>Insecure punya bekas koreng? Konsultasikan dulu, baru kita rawat.</p>
+      </div>
+      <div class="cell">
+        <h4>SOJI Body Slimming</h4>
+        <p>Mengencangkan kulit area badan, biar terlihat lebih slim dan singset.</p>
+      </div>
+      <div class="cell">
+        <h4>Exilis Ultra</h4>
+        <p>Mengencangkan kulit wajah, meluruhkan lemak, garis halus, dan kerutan.</p>
+      </div>
+      <div class="cell">
+        <h4>Dermapen</h4>
+        <p>Jerawat, skin barrier rusak, kulit kering, kusam, bertekstur, bekas jerawat.</p>
+      </div>
+      <div class="cell">
+        <h4>EPN</h4>
+        <p>Bekas jerawat, bopeng, dan kulit bertekstur.</p>
+      </div>
+      <div class="cell" style="background:var(--chip);border-color:var(--mocha)">
+        <h4 style="color:var(--mocha-deep)">Belum tahu mau yang mana?</h4>
+        <p>Chat dulu, konsultasinya gratis. Kami bantu pilihkan.</p>
+        <a class="btn btn-ghost" style="margin-top:4px;font-size:.82rem;padding:9px 12px" href="https://wa.me/6281224867799?text=Halo%20SOJI%2C%20saya%20mau%20konsultasi%20dulu%20soal%20promo%207th%20Anniversary." target="_blank" rel="noopener">Konsultasi gratis</a>
+      </div>
+    </div>
+  </section>
+
+  <section aria-label="Kontak dan lokasi">
+    <p class="eyebrow">Kunjungi kami</p>
+    <div class="info">
+      <div class="hours">
+        <strong>08.00 &ndash; 20.00</strong>
+        <span style="color:var(--ink-soft);font-size:.88rem">Buka setiap hari</span>
+      </div>
+      <div class="contact">
+        <div class="row">
+          <span class="k">WhatsApp</span>
+          <b>0812-2486-7799 <button class="copy" type="button" data-copy="081224867799">Salin</button></b>
+        </div>
+        <div class="row"><span class="k">Instagram</span><b>@sojitasikmalaya</b></div>
+        <div class="row"><span class="k">TikTok</span><b>@sojitasikmalaya</b></div>
+        <div class="row">
+          <span class="k">Email</span>
+          <b>soji.skincare@gmail.com <button class="copy" type="button" data-copy="soji.skincare@gmail.com">Salin</button></b>
+        </div>
+      </div>
+      <p class="addr">Jl. HZ Mustofa, Perum Permata Regency, Blok S1, Tasikmalaya</p>
+    </div>
+  </section>
+
+  <div class="closing">
+    <p class="sig">Sampai ketemu di klinik</p>
+    <p>Ms. Peisilia Alodia &mdash; SOJI Korean Aesthetic &amp; Skinmaster Coach</p>
+  </div>
+
+  <p class="terms">Promo 7th Anniversary berlaku 25 Oktober sampai 5 Desember 2026. Slot terbatas dan tidak bisa digabung dengan promo lain. Booking dulu lewat WhatsApp untuk mengamankan jadwalmu.</p>
+
+  <a class="backlink" href="/">&larr; Lihat cerita 7 tahun SOJI</a>
+</div>
+
+<div class="sticky">
+  <div class="inner">
+    <a class="btn" href="https://wa.me/6281224867799?text=Halo%20SOJI%2C%20saya%20mau%20tanya%20promo%207th%20Anniversary." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.13h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.17 8.17 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.41a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.21-8.24 8.21Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.14.16-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.74 2.66 4.22 3.73.59.25 1.05.4 1.41.52.59.19 1.13.16 1.56.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.29Z"/></svg>
+      Chat SOJI sekarang
+    </a>
+  </div>
+</div>
+
+<script>
+/* Hitung mundur sampai promo berakhir: 5 Desember 2026, pukul 23.59 WIB. */
+(function () {
+  var akhir = new Date("2026-12-05T23:59:59+07:00").getTime();
+  var el = document.getElementById("sisa");
+  if (!el) return;
+
+  function tulis() {
+    var sisa = akhir - Date.now();
+    if (sisa <= 0) {
+      el.textContent = "periode promo sudah berakhir";
+      el.classList.add("ended");
+      return false;
+    }
+    var jam = Math.floor(sisa / 3600000);
+    if (jam < 48) {
+      el.textContent = "sisa " + jam + " jam terakhir";
+    } else {
+      el.textContent = "sisa " + Math.ceil(jam / 24) + " hari";
+    }
+    return true;
+  }
+
+  if (tulis()) setInterval(tulis, 60000);
+})();
+
+document.querySelectorAll(".copy").forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    var text = btn.dataset.copy, original = btn.textContent;
+    function done(){ btn.textContent = "Tersalin"; setTimeout(function(){ btn.textContent = original; }, 1600); }
+    function select(){
+      var r = document.createRange(); r.selectNodeContents(btn.parentNode);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      btn.textContent = "Pilih & salin"; setTimeout(function(){ btn.textContent = original; }, 2200);
+    }
+    try { navigator.clipboard.writeText(text).then(done, select); } catch (e) { select(); }
+  });
+});
+</script>
+</body>
+</html>

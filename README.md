@@ -35,12 +35,49 @@ HTML atau CSS sama sekali. Simpan, refresh browser, selesai.
 
 ```
 index.html              ← kerangka halaman
+promo/index.html        ← halaman promo 7th Anniversary (berdiri sendiri)
 assets/
   css/style.css         ← seluruh styling & brand token
   js/content.js         ← ISI WEBSITE (edit di sini)
   js/main.js            ← render + animasi
-  img/                  ← taruh foto klinik / treatment di sini
+  img/                  ← foto, logo SOJI, dan gambar preview link
 ```
+
+## Halaman promo: `/promo`
+
+`promo/index.html` adalah halaman terpisah berisi daftar promo 7th Anniversary
+(harga, paket, dan tombol booking WhatsApp). Dibuat untuk dibagikan sebagai satu
+link pendek di bio Instagram, caption TikTok, atau broadcast WhatsApp.
+
+Setelah di-deploy, alamatnya: `https://<nama-situs>.netlify.app/promo`
+
+Halaman ini **tidak** mengambil isi dari `content.js` — semua teks dan harga ada
+langsung di dalam `promo/index.html`, supaya promo bisa diganti tanpa menyentuh
+situs utama. Cari bagian `<article class="promo">` untuk tiap paket.
+
+### Periode promo
+
+Berjalan **25 Oktober – 5 Desember 2026**. Halaman menampilkan hitung mundur yang
+berjalan sendiri, dan otomatis berganti jadi *"periode promo sudah berakhir"*
+lewat tanggal itu.
+
+Kalau periodenya diperpanjang, ada **tiga** tempat yang perlu diubah di
+`promo/index.html`:
+
+1. `<span class="dates">` di hero — tanggal singkat
+2. `new Date("2026-12-05T23:59:59+07:00")` di blok `<script>` — batas hitung mundur
+3. paragraf `.terms` di bagian bawah — tanggal lengkap
+
+### Yang masih perlu diisi
+
+| Yang perlu diisi | Letaknya |
+|---|---|
+| URL absolut gambar preview | `<meta property="og:image">` di `<head>`, tandanya `⬅ GANTI` |
+
+> Gambar preview link (`assets/img/og-promo.jpg`) adalah yang muncul saat link
+> dibagikan di WhatsApp. WhatsApp lebih patuh kalau alamatnya ditulis lengkap,
+> jadi ganti `/assets/img/og-promo.jpg` jadi `https://<nama-situs>.netlify.app/assets/img/og-promo.jpg`
+> begitu domainnya final.
 
 ## Brand token (warna & font)
 
@@ -69,10 +106,25 @@ Mode gelap sudah ikut: halaman menyesuaikan tema perangkat secara otomatis.
 
 ## Publikasi
 
+**Netlify (disarankan)** — konfigurasinya sudah ada di `netlify.toml`, tanpa
+build step. Di [app.netlify.com](https://app.netlify.com): *Add new site* →
+*Import an existing project* → pilih GitHub → repo `peisilia/bedah-skincare` →
+pilih branch ini → *Deploy*. Setiap push ke branch tersebut otomatis ter-deploy
+ulang.
+
+Hasilnya dua alamat:
+
+| Halaman | Alamat |
+|---|---|
+| Cerita 7 tahun | `https://<nama-situs>.netlify.app/` |
+| Promo anniversary | `https://<nama-situs>.netlify.app/promo` |
+
+Nama situs bisa diganti di *Site configuration → Change site name*.
+
+**Tanpa akun GitHub** — drag folder ini ke [netlify.com/drop](https://app.netlify.com/drop).
+
 **GitHub Pages** — Settings → Pages → Source: `Deploy from a branch` →
 pilih branch ini → folder `/ (root)` → Save.
-
-Alternatif tanpa konfigurasi: drag folder ini ke [netlify.com/drop](https://app.netlify.com/drop).
 
 ## Dukungan browser
 
