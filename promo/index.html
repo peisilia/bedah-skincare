@@ -81,6 +81,12 @@ section{padding-block:34px}
 .anniv{font-family:var(--serif);font-size:clamp(1.6rem,7vw,2.3rem);font-style:italic;
        font-weight:400;margin-top:2px}
 .hero-note{font-size:.95rem;color:var(--ink-soft);margin-top:14px;max-width:34ch;margin-inline:auto}
+.period{display:inline-flex;flex-wrap:wrap;justify-content:center;align-items:center;
+        gap:6px 10px;margin-top:16px;background:var(--chip);border:1px solid var(--line);
+        border-radius:16px;padding:9px 16px;font-size:.84rem;font-weight:600;line-height:1.4}
+.period .dot{width:4px;height:4px;border-radius:99px;background:var(--mocha);flex:none}
+.period .left{color:var(--coral);font-variant-numeric:tabular-nums}
+.period .left.ended{color:var(--ink-soft)}
 .confetti{display:flex;justify-content:center;gap:7px;margin-top:20px}
 .confetti i{width:30px;height:5px;border-radius:99px;display:block}
 
@@ -193,6 +199,11 @@ section{padding-block:34px}
     <div class="seven">7<sup>th</sup></div>
     <div class="anniv">Anniversary</div>
     <p class="hero-note">Tujuh tahun merawat kulit orang Tasik. Kami rayakan dengan harga yang jarang kami buka.</p>
+    <p class="period">
+      <span class="dates">25 Okt &ndash; 5 Des 2026</span>
+      <span class="dot" aria-hidden="true"></span>
+      <span class="left" id="sisa">periode perayaan</span>
+    </p>
     <div class="confetti" aria-hidden="true">
       <i style="background:var(--coral)"></i><i style="background:var(--gold)"></i>
       <i style="background:var(--teal)"></i><i style="background:var(--blush)"></i>
@@ -378,7 +389,7 @@ section{padding-block:34px}
     <p>Ms. Peisilia Alodia &mdash; SOJI Korean Aesthetic &amp; Skinmaster Coach</p>
   </div>
 
-  <p class="terms">Promo 7th Anniversary, slot terbatas dan tidak bisa digabung dengan promo lain. Booking dulu lewat WhatsApp untuk mengamankan jadwalmu.</p>
+  <p class="terms">Promo 7th Anniversary berlaku 25 Oktober sampai 5 Desember 2026. Slot terbatas dan tidak bisa digabung dengan promo lain. Booking dulu lewat WhatsApp untuk mengamankan jadwalmu.</p>
 
   <a class="backlink" href="/">&larr; Lihat cerita 7 tahun SOJI</a>
 </div>
@@ -393,6 +404,31 @@ section{padding-block:34px}
 </div>
 
 <script>
+/* Hitung mundur sampai promo berakhir: 5 Desember 2026, pukul 23.59 WIB. */
+(function () {
+  var akhir = new Date("2026-12-05T23:59:59+07:00").getTime();
+  var el = document.getElementById("sisa");
+  if (!el) return;
+
+  function tulis() {
+    var sisa = akhir - Date.now();
+    if (sisa <= 0) {
+      el.textContent = "periode promo sudah berakhir";
+      el.classList.add("ended");
+      return false;
+    }
+    var jam = Math.floor(sisa / 3600000);
+    if (jam < 48) {
+      el.textContent = "sisa " + jam + " jam terakhir";
+    } else {
+      el.textContent = "sisa " + Math.ceil(jam / 24) + " hari";
+    }
+    return true;
+  }
+
+  if (tulis()) setInterval(tulis, 60000);
+})();
+
 document.querySelectorAll(".copy").forEach(function (btn) {
   btn.addEventListener("click", function () {
     var text = btn.dataset.copy, original = btn.textContent;

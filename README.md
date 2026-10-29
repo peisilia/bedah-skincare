@@ -55,11 +55,23 @@ Halaman ini **tidak** mengambil isi dari `content.js` — semua teks dan harga a
 langsung di dalam `promo/index.html`, supaya promo bisa diganti tanpa menyentuh
 situs utama. Cari bagian `<article class="promo">` untuk tiap paket.
 
+### Periode promo
+
+Berjalan **25 Oktober – 5 Desember 2026**. Halaman menampilkan hitung mundur yang
+berjalan sendiri, dan otomatis berganti jadi *"periode promo sudah berakhir"*
+lewat tanggal itu.
+
+Kalau periodenya diperpanjang, ada **tiga** tempat yang perlu diubah di
+`promo/index.html`:
+
+1. `<span class="dates">` di hero — tanggal singkat
+2. `new Date("2026-12-05T23:59:59+07:00")` di blok `<script>` — batas hitung mundur
+3. paragraf `.terms` di bagian bawah — tanggal lengkap
+
 ### Yang masih perlu diisi
 
 | Yang perlu diisi | Letaknya |
 |---|---|
-| Tanggal berakhirnya promo | paragraf `.terms` di bagian paling bawah |
 | URL absolut gambar preview | `<meta property="og:image">` di `<head>`, tandanya `⬅ GANTI` |
 
 > Gambar preview link (`assets/img/og-promo.jpg`) adalah yang muncul saat link
